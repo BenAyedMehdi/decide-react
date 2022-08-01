@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight'
 import { makeStyles } from '@material-ui/core'
 import TextField from '@material-ui/core/TextField'
 import CardItem from '../components/card'
+import BasicTable from '../components/Table'
 
 /*const useStyles = makeStyles({
     field: {
@@ -29,17 +29,25 @@ function TakeDecision() {
     const classes = useStyles()
   const [title, setTitle] = useState('')
   const [titleError, setTitleError] = useState(false)
+  const [pros, setPros] = useState([])
+  const [cons, setCons] = useState([])
 
   const handleSubmit = (e) => {
     e.preventDefault()
     setTitleError(false)
 
-    if (title == '') {
+    if (title === '') {
       setTitleError(true)
     }
     if (title ) {
       console.log(title)
     } 
+  }
+  const addPro = (item) => {
+    setPros([...pros, item])
+  }
+  const addCon = (item) => {
+    setCons([...cons, item])
   }
   return (
     <div>
@@ -67,13 +75,16 @@ function TakeDecision() {
         </Button>
       </form>
 
-    <div id="header-wrapper">
-      <CardItem title={"pros"} />
+    <div id="add-reasons">
+      <div className='CardItem'>
+        <CardItem addItem={addPro} type={'pros'}></CardItem>
+      </div>
       
-      <CardItem title={"cons"}/>
+      <div className='CardItem'>
+        <CardItem addItem={addCon} type={'cons'}></CardItem>
+      </div>
     </div>
-
-      
+    <BasicTable pros={pros} cons={cons} />
     </Container>
     </div>
   )

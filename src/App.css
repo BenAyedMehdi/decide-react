@@ -24,6 +24,12 @@
   color: white;
 }
 
+#add-reasons .CardItem{
+    float: left;
+	width: 49%;
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
 .App-link {
   color: #61dafb;
 }
