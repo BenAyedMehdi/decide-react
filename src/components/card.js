@@ -4,6 +4,7 @@ import Container from '@material-ui/core/Container'
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight'
 import { makeStyles } from '@material-ui/core'
 import TextField from '@material-ui/core/TextField'
+import ImportanceRadioButtonsGroup from './importanceRadio'
 
 const useStyles = makeStyles(() => ({
   input1: {
@@ -20,19 +21,28 @@ export default function CardItem({type, addItem}) {
 
   const classes = useStyles()
   const [reason, setReason] = useState('')
+  const [value, setValue] = useState(3);
 
   const handleSubmit = (e) => {
     e.preventDefault()
     if (reason ) {
-      addItem(reason)
+      const item = {
+        'reason': reason,
+        "value" : value
+      }
+      addItem(item)
       setReason('')
+      setValue(3)// !!
     } 
+  }
+  const updateValue = (newValue) =>{
+    setValue(newValue);
   }
 
   return (
-    <div>
+    <div className='pros-or-cons-card'>
         <Container size="sm">
-      //Why is it {type === 'pros'? 'good' : 'bad'}
+      // Why is it {type === 'pros'? 'good' : 'bad'}
       <form noValidate autoComplete="off" onSubmit={handleSubmit}>
         <div >
             <TextField className={classes.field}
@@ -41,10 +51,13 @@ export default function CardItem({type, addItem}) {
             value={reason}
             variant="outlined" 
             color="secondary" 
-            fullWidth
+            fullWidth 
             InputProps={{ classes: { input: classes.input1 } }}
             />
           </div>
+        <div className='importance-radio-group'>
+          <ImportanceRadioButtonsGroup changeValue={updateValue}/>
+        </div>
         <Button
           type="submit" 
           color="secondary" 
