@@ -14,8 +14,8 @@ export default function BasicTable({pros, cons}) {
         let arr = []
         for(let i = 0 ; i< maxLength ; i++){
             let row = []
-            const prosItem = pros[i]? pros[i] : ''
-            const consItem = cons[i]? cons[i] : ''
+            const prosItem = pros[i]? pros[i].reason + ' (' + pros[i].value + ')' : ''
+            const consItem = cons[i]? cons[i].reason + ' (' + cons[i].value+ ')': ''
             row.push(prosItem)
             row.push(consItem)
             arr.push(row)

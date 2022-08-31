@@ -24,11 +24,23 @@
   color: white;
 }
 
+.pros-or-cons-card{
+	border: 2px solid red;
+	border-radius: 5px;
+}
+
+.importance-radio-group{
+	margin-top: 30px;
+}
 #add-reasons .CardItem{
+	margin: 5px;
+	padding: 16px 0px 16px 0px;
     float: left;
-	width: 49%;
+	width: 45%;
 	margin-bottom: 10px;
 	margin-top: 20px;
+	border: 2px solid pink;
+	border-radius: 5px;
 }
 .App-link {
   color: #61dafb;

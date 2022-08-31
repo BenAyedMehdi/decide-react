@@ -1,0 +1,140 @@
+body{
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#ff4486
+}
+
+.App {
+    text-align: center;
+  }
+  
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#header {
+    min-height: 50px;
+    background-color: darkmagenta;
+    position: relative;
+}
+
+#logo {
+    display: inline-block;
+    float: left;
+}
+
+#logo h1 {
+    background: #ff4486;
+    color: #fff;
+    border-radius: 6px;
+    font-family: 'Oleo Script', serif;
+    font-weight: 400;
+    padding: 0.25em 0.2em 0.25em 0.2em;
+    font-size: 3.25em;
+    letter-spacing: 0.05em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#nav{
+    float: right;
+    margin-top: 35px;
+    padding: 10px;
+}
+
+a{
+    color: #F3F3F3;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#nav ul li {
+    float: left;
+    display: inline;
+    line-height: 4.5em;
+    padding-left: 1.5em;
+    color: #F3F3F3;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.current a{
+    background: #F3F3F3;
+    color: darkmagenta;
+    font-weight: bold;
+    padding: 0.25em 0.2em 0.25em 0.2em;
+    font-size: 1.5em;
+}
+
+#banner{
+    width: 80%;
+    margin-top: 50px;
+    padding: 16px;
+    background-color: grey;
+    border-radius: 15px;
+}
+
+.banner-description{
+    width:65%;
+    float: left;
+}
+.banner-description h2{
+    
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+.banner-description p{
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.banner-links{
+    width: 35%;
+    float: right;
+    display: inline;
+    text-decoration: none;
+}
+.banner-links ul {
+    list-style: none;
+    padding: 0px;
+}
+.banner-links li {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.primary-button{
+    width: auto;
+    padding: 20px 20px 20px 20px;
+    height: 40%;
+    text-align: center;
+    background-color: #ff4486;
+    margin-bottom: 50px;
+    min-width: 100%;
+}
+
+.secondary-button{
+    margin-top: 60px;
+    height: 40%;
+    padding: 20px;
+    text-align: center;
+    background-color: blue;
+}
+
+.banner-links a{
+    display: block;
+    width: 100%;
+}
+
+.widget-links{
+width: 50%;
+float: left;
+}
+.widget links{
+    width: 50%;
+    float: right;
+}
