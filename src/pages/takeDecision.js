@@ -84,7 +84,9 @@ function TakeDecision() {
         <CardItem addItem={addCon} type={'cons'}></CardItem>
       </div>
     </div>
-    <BasicTable pros={pros} cons={cons} />
+    <div className='the-table'>
+      <BasicTable pros={pros} cons={cons} />
+    </div>
     </Container>
     </div>
   )
