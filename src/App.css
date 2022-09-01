@@ -23,12 +23,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.pros-or-cons-card{
-	border: 2px solid red;
-	border-radius: 5px;
-}
-
 .importance-radio-group{
 	margin-top: 30px;
 }
