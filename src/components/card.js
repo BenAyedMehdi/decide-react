@@ -32,7 +32,6 @@ export default function CardItem({type, addItem}) {
       }
       addItem(item)
       setReason('')
-      setValue(3)// !!
     } 
   }
   const updateValue = (newValue) =>{

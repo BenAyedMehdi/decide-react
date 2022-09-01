@@ -38,31 +38,35 @@ export default function BasicTable({pros, cons}) {
       <Table sx={{ minWidth: 300 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell size='small'>Value</TableCell>
-            <TableCell style={{backgroundColor:'green', color: 'white',}}>Pros</TableCell>
-            <TableCell style={{backgroundColor:'red', color: 'white',}} align="right">Cons</TableCell>
-            <TableCell size='small' align="right">Value</TableCell>
+            <TableCell style={{backgroundColor:'#32CD32', color: 'white',}}>Pros</TableCell>
+            <TableCell style={{backgroundColor:'#32CD32',width:'50px', border:"5px solid rgba(224, 224, 224, 1)"}} size='small'>Value</TableCell>
+            <TableCell style={{backgroundColor:'#FF4500',width:'50px', border:"5px solid rgba(224, 224, 224, 1)"}} size='small' align="right">Value</TableCell>
+            <TableCell style={{backgroundColor:'#FF4500', color: 'white',}} align="right">Cons</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {createElements(pros,cons).map((row, index) => (
             <TableRow
+            border= "1"
+            margin = "5"
               hover
               key={index}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell component="th" scope="row"> {row[0]}</TableCell>
-
+              
               { row[0]==5 &&  <TableCell style={{backgroundColor:"#FF8C00"}}  component="th" scope="row">{row[1]}</TableCell>}
               { row[0]==3 && <TableCell style={{backgroundColor:"#FFDAB9"}}  component="th" scope="row">{row[1]}</TableCell>}
               { row[0]==1 &&  <TableCell component="th" scope="row">{row[1]}</TableCell>}
+              { !row[0] &&  <TableCell component="th" scope="row"> </TableCell>}
               
-
+              <TableCell style={{border:"5px solid rgba(224, 224, 224, 1)"}} component="th" scope="row"> {row[0]}</TableCell>
+              
+              <TableCell style={{border:"5px solid rgba(224, 224, 224, 1)"}} align="right">{row[3]}</TableCell>
               { row[3]==5 &&  <TableCell style={{backgroundColor:"#FF8C00"}}  component="th" scope="row">{row[2]}</TableCell>}
               { row[3]==3 && <TableCell style={{backgroundColor:"#FFDAB9"}}  component="th" scope="row">{row[2]}</TableCell>}
               { row[3]==1 &&  <TableCell component="th" scope="row">{row[2]}</TableCell>}
+              { !row[3] &&  <TableCell component="th" scope="row"></TableCell>}
               
-              <TableCell align="right">{row[3]}</TableCell>
              
             </TableRow>
           ))}
