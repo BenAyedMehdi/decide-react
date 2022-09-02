@@ -9,6 +9,11 @@ import Paper from '@mui/material/Paper';
 
 export default function BasicTable({pros, cons}) {
 
+    const totalValue = (list) =>{
+      let total=0
+      list.map((p) => total += p.value)
+      return total
+    }
     const createElements = (pros, cons) =>{
       pros.sort((a,b) =>{
         return b.value- a.value
@@ -39,8 +44,8 @@ export default function BasicTable({pros, cons}) {
         <TableHead>
           <TableRow>
             <TableCell style={{backgroundColor:'#32CD32', color: 'white',}}>Pros</TableCell>
-            <TableCell style={{backgroundColor:'#32CD32',width:'50px', border:"5px solid rgba(224, 224, 224, 1)"}} size='small'>Value</TableCell>
-            <TableCell style={{backgroundColor:'#FF4500',width:'50px', border:"5px solid rgba(224, 224, 224, 1)"}} size='small' align="right">Value</TableCell>
+            <TableCell style={{backgroundColor:'#32CD32',width:'50px', border:"5px solid rgba(224, 224, 224, 1)"}} size='small'>{totalValue(pros)}</TableCell>
+            <TableCell style={{backgroundColor:'#FF4500',width:'50px', border:"5px solid rgba(224, 224, 224, 1)"}} size='small' align="right">{totalValue(cons)}</TableCell>
             <TableCell style={{backgroundColor:'#FF4500', color: 'white',}} align="right">Cons</TableCell>
           </TableRow>
         </TableHead>
