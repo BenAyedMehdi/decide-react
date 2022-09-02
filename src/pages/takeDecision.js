@@ -41,8 +41,9 @@ function TakeDecision() {
     }
     if (title ) {
       console.log(title)
-    } 
+    }
   }
+  //new UI
   const addPro = (item) => {
     setPros([...pros, item])
   }
