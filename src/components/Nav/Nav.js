@@ -1,10 +1,16 @@
-import React from 'react'
+import { React, useState } from 'react'
 import { Link } from 'react-router-dom'
-import  './Nav.scss'
+import ReactSwitch from 'react-switch'
+import './Nav.scss'
 
 function Nav() {
+    const [theme, setTheme] = useState('dark')
+
+    const toggleTheme = () => {
+        setTheme((current) => (current === 'light' ? 'dark' : 'light'))
+    }
     return (
-        <div>
+        <>
             <div id="header-wrapper">
                 <header
                     id="header"
@@ -29,10 +35,19 @@ function Nav() {
                                 <Link to="/about">About</Link>
                             </li>
                         </ul>
+                        {/* <div className="switch">
+                            <ReactSwitch
+                                onChange={toggleTheme}
+                                checked={theme === 'dark'}
+                            />
+                            <label>
+                                {theme === 'light' ? 'Light Mode' : 'Dark Mode'}
+                            </label>
+                        </div> */}
                     </nav>
                 </header>
             </div>
-        </div>
+        </>
     )
 }
 
