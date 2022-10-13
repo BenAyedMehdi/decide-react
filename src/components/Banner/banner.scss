@@ -1,0 +1,62 @@
+#banner {
+    width: clamp(60%, 65rem, 90%);
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 10px 10px 0px 10px rgba(0, 0, 0, 0.05);
+    background-color: rgba(131, 181, 209, 0.5);
+    background-color: rgba(84, 242, 242, 0.25);
+    padding: 1em;
+    display: flex;
+}
+
+#dark #banner {
+    background-color: #0d0630;
+    // background-color: rgba(131, 181, 209, 0.5);
+    background: rgba(3, 0, 30, 0.8);
+    color: rgba(255, 255, 255, 0.5);
+    box-shadow: 10px 10px 0px 10px rgba(131, 181, 209, 0.2);
+}
+
+.banner__description {
+    // border: 5px solid green;
+}
+
+.banner__buttons {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    // margin: 2rem;
+    .button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1rem;
+        padding: 1.25rem 1rem;
+
+        -moz-transition: background-color 0.25s ease-in-out;
+        -webkit-transition: background-color 0.25s ease-in-out;
+        -ms-transition: background-color 0.25s ease-in-out;
+        transition: background-color 0.4s ease-in-out;
+
+        background-color: rgba(34, 117, 165, 0.6);
+        color: #fff;
+        border-radius: 6px;
+        font-weight: 800;
+        cursor: pointer;
+        font-size: 1.35em;
+    }
+    .active {
+        background-color: rgb(34, 117, 165);
+    }
+    .button:hover {
+        background-color: white;
+        color: rgba(34, 117, 165, 0.6);
+    }
+    .active:hover {
+        background-color: white;
+        color: rgb(34, 117, 165);
+    }
+}

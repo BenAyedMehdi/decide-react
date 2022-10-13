@@ -1,5 +1,10 @@
 import React from 'react'
 import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import PsychologyAltTwoToneIcon from '@mui/icons-material/PsychologyAltTwoTone'
+import PlayCircleFilledWhiteTwoToneIcon from '@mui/icons-material/PlayCircleFilledWhiteTwoTone'
+
+import './banner.scss'
 
 function Banner() {
     return (
@@ -9,31 +14,37 @@ function Banner() {
                     id="banner"
                     className="box container"
                 >
-                    <div className="row">
-                        <div className="col-7 col-12-medium">
-                            <h2>Decide</h2>
-                            <p>One decision can change your life forever!</p>
-                        </div>
-                        <div className="col-5 col-12-medium">
-                            <ul>
-                                <li>
-                                    <Link
-                                        to="/take-decision"
-                                        className="button large icon solid fa-arrow-circle-right"
-                                    >
+                    <div className="banner__description">
+                        <h2>Decide</h2>
+                        <p>One good decision can change your life forever!</p>
+                    </div>
+                    <div className="banner__buttons">
+                        <ul>
+                            <li>
+                                <Link
+                                    to="/take-decision"
+                                    className="button active "
+                                >
+                                    <span className="banner__buttons-decision">
                                         Take a decision
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        to="/exemples"
-                                        className="button alt large icon solid fa-question-circle"
-                                    >
+                                    </span>
+                                    <motion.div>
+                                        <PlayCircleFilledWhiteTwoToneIcon className="banner__buttons-decision-icon" />
+                                    </motion.div>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/exemples"
+                                    className="button "
+                                >
+                                    <span className="banner__buttons-examples">
                                         Examples
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
+                                    </span>
+                                    <PsychologyAltTwoToneIcon className="banner__buttons-examples-icon" />
+                                </Link>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

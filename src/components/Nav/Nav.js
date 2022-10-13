@@ -1,14 +1,14 @@
 import { React, useState } from 'react'
 import { Link } from 'react-router-dom'
-import ReactSwitch from 'react-switch'
+// import ReactSwitch from 'react-switch'
 import './Nav.scss'
 
 function Nav() {
-    const [theme, setTheme] = useState('dark')
+    // const [theme, setTheme] = useState('dark')
 
-    const toggleTheme = () => {
-        setTheme((current) => (current === 'light' ? 'dark' : 'light'))
-    }
+    // const toggleTheme = () => {
+    //     setTheme((current) => (current === 'light' ? 'dark' : 'light'))
+    // }
     return (
         <>
             <div id="header-wrapper">

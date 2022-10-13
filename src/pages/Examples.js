@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Exemples() {
+function Examples() {
     return (
         <div>
             <h3>should I date her or not?</h3>
@@ -10,4 +10,4 @@ function Exemples() {
     )
 }
 
-export default Exemples
+export default Examples

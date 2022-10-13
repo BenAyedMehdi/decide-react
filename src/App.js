@@ -1,12 +1,12 @@
 import { createContext, useState } from 'react'
 
-import Home from './pages/home'
+import Home from './pages/Home'
 import Nav from './components/Nav/Nav'
 
 // import Navbar from './components/Navbar'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import TakeDecision from './pages/takeDecision'
-import Exemples from './pages/exemples'
+import Examples from './pages/Examples'
 import About from './pages/about'
 import Footer from './components/Footer/Footer'
 
@@ -48,7 +48,7 @@ const App = () => {
                         />
                         <Route
                             path="/exemples"
-                            element={<Exemples />}
+                            element={<Examples />}
                         />
                         <Route
                             path="/about"

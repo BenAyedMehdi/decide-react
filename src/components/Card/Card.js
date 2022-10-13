@@ -40,7 +40,7 @@ export default function CardItem({ type, addItem }) {
     return (
         <div className="pros-or-cons-card">
             <Container size="sm">
-                //Why is it
+                {/* //Why is it */}
                 {type === 'pros' ? 'good' : 'bad'}
                 <form
                     noValidate
