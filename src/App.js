@@ -9,7 +9,8 @@ import {
   Routes,
   Route,
   Link,
-  BrowserRouter
+  BrowserRouter,
+  useNavigate
 } from "react-router-dom";
 import TakeDecision from './pages/takeDecision';
 import Home from './pages/home';
@@ -18,6 +19,9 @@ import About from './pages/about';
 
 
 function App() {
+
+
+
   return (
     <Router>
       <div className='container'>
@@ -25,7 +29,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/take-decision' element={<TakeDecision/>} />
-          <Route path='/exemples' element={<Exemples/>} />
+          <Route path='/exemples' element={<Exemples state={{level:1}}/>} />
           <Route path='/about' element={<About/>} />
         </Routes>
         <Footer/>
