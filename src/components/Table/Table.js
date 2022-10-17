@@ -10,24 +10,24 @@ import Paper from '@mui/material/Paper'
 export default function BasicTable({ pros, cons }) {
     const totalValue = (list) => {
         let total = 0
-        list.map((p) => (total += p.value))
+        list.map((p) => (total += p.importance))
         return total
     }
     const createElements = (pros, cons) => {
         pros.sort((a, b) => {
-            return b.value - a.value
+            return b.importance - a.importance
         })
         cons.sort((a, b) => {
-            return b.value - a.value
+            return b.importance - a.importance
         })
         const maxLength = pros.length > cons.length ? pros.length : cons.length
         let arr = []
         for (let i = 0; i < maxLength; i++) {
             let row = []
-            const prosValue = pros[i] ? pros[i].value : ''
-            const prosItem = pros[i] ? pros[i].reason : ''
-            const consItem = cons[i] ? cons[i].reason : ''
-            const consValue = cons[i] ? cons[i].value : ''
+            const prosValue = pros[i] ? pros[i].importance : ''
+            const prosItem = pros[i] ? pros[i].reasonName : ''
+            const consItem = cons[i] ? cons[i].reasonName : ''
+            const consValue = cons[i] ? cons[i].importance : ''
             row.push(prosValue)
             row.push(prosItem)
             row.push(consItem)
@@ -86,7 +86,7 @@ export default function BasicTable({ pros, cons }) {
                             key={index}
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
-                            {row[0] === 5 && (
+                            {row[0] == 5 && (
                                 <TableCell
                                     style={{ backgroundColor: '#FF8C00' }}
                                     component="th"
@@ -95,7 +95,7 @@ export default function BasicTable({ pros, cons }) {
                                     {row[1]}
                                 </TableCell>
                             )}
-                            {row[0] === 3 && (
+                            {row[0] == 3 && (
                                 <TableCell
                                     style={{ backgroundColor: '#FFDAB9' }}
                                     component="th"
@@ -104,7 +104,7 @@ export default function BasicTable({ pros, cons }) {
                                     {row[1]}
                                 </TableCell>
                             )}
-                            {row[0] === 1 && (
+                            {row[0] == 1 && (
                                 <TableCell
                                     component="th"
                                     scope="row"
@@ -136,7 +136,7 @@ export default function BasicTable({ pros, cons }) {
                             >
                                 {row[3]}
                             </TableCell>
-                            {row[3] === 5 && (
+                            {row[3] == 5 && (
                                 <TableCell
                                     style={{ backgroundColor: '#FF8C00' }}
                                     component="th"
@@ -145,7 +145,7 @@ export default function BasicTable({ pros, cons }) {
                                     {row[2]}
                                 </TableCell>
                             )}
-                            {row[3] === 3 && (
+                            {row[3] == 3 && (
                                 <TableCell
                                     style={{ backgroundColor: '#FFDAB9' }}
                                     component="th"
@@ -154,7 +154,7 @@ export default function BasicTable({ pros, cons }) {
                                     {row[2]}
                                 </TableCell>
                             )}
-                            {row[3] === 1 && (
+                            {row[3] == 1 && (
                                 <TableCell
                                     component="th"
                                     scope="row"

@@ -6,6 +6,20 @@ import PlayCircleFilledWhiteTwoToneIcon from '@mui/icons-material/PlayCircleFill
 
 import './banner.scss'
 
+const iconVariants = {
+    active: {
+        x: 20,
+        transition: {
+            duration: 0.6,
+            yoyo: Infinity,
+            ease: 'easeOut',
+        },
+    },
+    hover: {
+        x: 0,
+    },
+}
+
 function Banner() {
     return (
         <div>
@@ -16,6 +30,7 @@ function Banner() {
                 >
                     <div className="banner__description">
                         <h2>Decide</h2>
+
                         <p>One good decision can change your life forever!</p>
                     </div>
                     <div className="banner__buttons">
@@ -28,8 +43,13 @@ function Banner() {
                                     <span className="banner__buttons-decision">
                                         Take a decision
                                     </span>
-                                    <motion.div>
-                                        <PlayCircleFilledWhiteTwoToneIcon className="banner__buttons-decision-icon" />
+                                    <motion.div
+                                        className="banner__buttons-decision-icon"
+                                        variants={iconVariants}
+                                        animate="active"
+                                        whileHover="hover"
+                                    >
+                                        <PlayCircleFilledWhiteTwoToneIcon className="decision-icon" />
                                     </motion.div>
                                 </Link>
                             </li>
@@ -41,7 +61,9 @@ function Banner() {
                                     <span className="banner__buttons-examples">
                                         Examples
                                     </span>
-                                    <PsychologyAltTwoToneIcon className="banner__buttons-examples-icon" />
+                                    <div className="banner__buttons-examples-icon">
+                                        <PsychologyAltTwoToneIcon className="examples-icon" />
+                                    </div>
                                 </Link>
                             </li>
                         </ul>

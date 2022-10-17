@@ -8,7 +8,13 @@
     padding: 1em;
     display: flex;
 }
-
+@media screen and (max-width: 980px) {
+    #banner {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
 #dark #banner {
     background-color: #0d0630;
     // background-color: rgba(131, 181, 209, 0.5);
@@ -17,25 +23,23 @@
     box-shadow: 10px 10px 0px 10px rgba(131, 181, 209, 0.2);
 }
 
-.banner__description {
-    // border: 5px solid green;
-}
-
 .banner__buttons {
-    width: 60%;
+    width: 70%;
+
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0;
     // margin: 2rem;
     .button {
-        width: 100%;
+        // width: 15rem;
+        position: relative;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        // align-items: center;
+        // justify-content: flex-start;
         margin: 1rem;
-        padding: 1.25rem 1rem;
-
+        padding: 1.25rem 3.5rem 1.25rem 1.25rem;
+        text-decoration: none;
         -moz-transition: background-color 0.25s ease-in-out;
         -webkit-transition: background-color 0.25s ease-in-out;
         -ms-transition: background-color 0.25s ease-in-out;
@@ -48,6 +52,12 @@
         cursor: pointer;
         font-size: 1.35em;
     }
+    @media screen and (max-width: 980px) {
+        .button {
+            width: 15rem !important;
+            padding: 1em 0.5em !important;
+        }
+    }
     .active {
         background-color: rgb(34, 117, 165);
     }
@@ -58,5 +68,27 @@
     .active:hover {
         background-color: white;
         color: rgb(34, 117, 165);
+    }
+}
+//cool tool offered by sass that i ve just discoverd ; you can nest two children of two different parents
+.banner__buttons-decision-icon,
+.banner__buttons-examples-icon {
+    // border: 5px solid red;
+
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    // height: 5rem;
+    // margin-left: 0.25rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .decision-icon,
+    .examples-icon {
+        width: 2.5rem;
+        height: 2.5rem;
     }
 }
