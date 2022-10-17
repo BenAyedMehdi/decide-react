@@ -6,31 +6,29 @@ function Exemples() {
   const [decisions, setDecisions] = useState([])
 
   useEffect(  () => {
-    axios.get('https://localhost:7139/api/Decisions')
-    .then(res => {
-      setDecisions(res.data)
-      console.log(res.data)
-    }).catch(err => console.log(err))
-    /*var response =  apiCalls.GetAllDecisions()
-    setDecisions(response);*/
-    /*
-    fetch("https://localhost:7139/api/Decisions")
-      .then(res => res.json())
-      .then(
-        (result) => {
-          console.log(result)
-          });*/
-
+    const getDecisions = async ()=>{
+      const decisionsFromServer = await apiCalls.GetAllDecisions();
+      setDecisions(decisionsFromServer)
+    }
+    getDecisions();
   }, [])
 
-
   return (
-    decisions.map(d=>{
-      return(
-        <div key={d.decisionId}>{d.idea}</div>
-      )
-    })
-  )
-}
+    <div>
+
+      {decisions.length == 0 &&
+        <h2>There are no exemples</h2>
+      }
+
+      {decisions.map((d)=>{
+        return(
+          <div key={d.decisionId}>
+            {d.idea}
+            </div>
+        )
+      })}
+    
+      </div>
+)}
 
 export default Exemples
