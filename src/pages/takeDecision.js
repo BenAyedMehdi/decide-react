@@ -52,8 +52,8 @@ function TakeDecision() {
   const addPro = (item) => {
     setPros([...pros, item])
     const newPro = {
-      reasonName : item.reason,
-      importance : item.value,
+      reasonName : item.reasonName,
+      importance : item.importance,
       decisionId : currentId
     }
     const res = apiCalls.AddPro(newPro)
@@ -62,8 +62,8 @@ function TakeDecision() {
   const addCon = (item) => {
     setCons([...cons, item])
     const newCon = {
-      reasonName : item.reason,
-      importance : item.value,
+      reasonName : item.reasonName,
+      importance : item.importance,
       decisionId : currentId
     }
     const res = apiCalls.AddCon(newCon)

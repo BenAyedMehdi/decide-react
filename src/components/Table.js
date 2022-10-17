@@ -11,24 +11,24 @@ export default function BasicTable({pros, cons}) {
 
     const totalValue = (list) =>{
       let total=0
-      list.map((p) => total += p.value)
+      list.map((p) => total += p.importance)
       return total
     }
     const createElements = (pros, cons) =>{
       pros.sort((a,b) =>{
-        return b.value- a.value
+        return b.importance- a.importance
       })
       cons.sort((a,b) =>{
-        return b.value- a.value
+        return b.importance- a.importance
       })
         const maxLength = pros.length > cons.length ? pros.length : cons.length
         let arr = []
         for(let i = 0 ; i< maxLength ; i++){
             let row = []
-            const prosValue = pros[i]? pros[i].value : ''
-            const prosItem = pros[i]? pros[i].reason : ''
-            const consItem = cons[i]? cons[i].reason : ''
-            const consValue = cons[i]? cons[i].value : ''
+            const prosValue = pros[i]? pros[i].importance : ''
+            const prosItem = pros[i]? pros[i].reasonName : ''
+            const consItem = cons[i]? cons[i].reasonName : ''
+            const consValue = cons[i]? cons[i].importance : ''
             row.push(prosValue)
             row.push(prosItem)
             row.push(consItem)
