@@ -27,8 +27,8 @@ export default function CardItem({type, addItem}) {
     e.preventDefault()
     if (reason ) {
       const item = {
-        'reason': reason,
-        "value" : value
+        reasonName : reason,
+        importance : value
       }
       addItem(item)
       setReason('')
