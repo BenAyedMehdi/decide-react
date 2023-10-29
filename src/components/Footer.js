@@ -30,6 +30,7 @@ function Footer() {
                                     <li><a href="https://github.com/BenAyedMehdi" className="icon brands fa-github"><span className="label">Github</span></a></li>
                                     <li><a href="https://www.facebook.com/happy.mahdi/" className="icon brands fa-facebook-f"><span className="label">Facebook</span></a></li>
                                     <li><a href="https://www.linkedin.com/in/mehdi-ben-ayed-hungary/" className="icon brands fa-linkedin"><span className="label">Instagram</span></a></li>
+                                    <li><a href="https://mehdibenayed.netlify.app/" class="icon brands fa-dribbble"><span class="label">Website</span></a></li>
                                 </ul>
                                 <p>foosheeka@gmail.com<br />
                                 Budapest, Hungary<br /></p>

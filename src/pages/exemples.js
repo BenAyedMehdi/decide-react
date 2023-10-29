@@ -9,8 +9,9 @@ function Exemples() {
   useEffect(  () => {
     const getDecisions = async ()=>{
       const decisionsFromServer = await apiCalls.GetAllDecisions();
-      setDecisions(decisionsFromServer)
-      console.log(decisionsFromServer)
+      const publicDecisions = decisionsFromServer.filter(d=>d.isPublic)
+      setDecisions(publicDecisions)
+      console.log(publicDecisions)
     }
     getDecisions();
   }, [])
@@ -19,16 +20,15 @@ function Exemples() {
     <div>
 
       {decisions.length == 0 &&
-        <h2>There are no exemples</h2>
+        <h2>Loading...</h2>
       }
 
-      {decisions.map((d)=>{
+      {decisions.map((d)=> {
         return(
           <div key={d.decisionId} className='the-table'>
            <h2>{d.idea}</h2> 
            <BasicTable pros={d.prosList} cons={d.consList} />
           </div>
-          
         )
       })}
     
