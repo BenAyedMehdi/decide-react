@@ -22,13 +22,15 @@ function App() {
   return (
     <Router>
       <div className='container'>
+        <Nav/>
         <Routes> 
-          <Route path='/' element={<SiteUnderConstruction/>} />
-          <Route path='/home' element={<Home/>} />
+          <Route path='/' element={<Home/>} />
           <Route path='/take-decision' element={<TakeDecision/>} />
           <Route path='/exemples' element={<Exemples/>} />
           <Route path='/about' element={<About/>} />
+          <Route path='/unavailable' element={<SiteUnderConstruction/>} />
         </Routes>
+        <Footer/>
       </div>
     </Router>
   );

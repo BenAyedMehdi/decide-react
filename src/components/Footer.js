@@ -13,9 +13,9 @@ function Footer() {
                                 <h3>Decide</h3>
                                 <ul className="style2">
                                     <li><a href="#">Home</a></li>
-                                    <li><a href="#">Take a decision</a></li>
-                                    <li><a href="#">See exemples</a></li>
-                                    <li><a href="#">About</a></li>
+                                    <li><a href="take-decision">Take a decision</a></li>
+                                    <li><a href="exemples">See exemples</a></li>
+                                    <li><a href="about">About</a></li>
                                 </ul>
                             </section>
                         </div>
@@ -29,17 +29,17 @@ function Footer() {
                                 <ul>
                                     <li><a href="https://github.com/BenAyedMehdi" className="icon brands fa-github"><span className="label">Github</span></a></li>
                                     <li><a href="https://www.facebook.com/happy.mahdi/" className="icon brands fa-facebook-f"><span className="label">Facebook</span></a></li>
-                                    <li><a href="https://www.linkedin.com/in/mehdi-ben-ayed-hungary/" className="icon brands fa-linkedin"><span className="label">Instagram</span></a></li>
+                                    <li><a href="https://www.linkedin.com/in/ben-ayed-mehdi/" className="icon brands fa-linkedin"><span className="label">Instagram</span></a></li>
                                     <li><a href="https://mehdibenayed.netlify.app/" class="icon brands fa-dribbble"><span class="label">Website</span></a></li>
                                 </ul>
-                                <p>foosheeka@gmail.com<br />
+                                <p>mr.mehdi.ben.ayed@gmail.com<br />
                                 Budapest, Hungary<br /></p>
                             </section>
                         </div>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-12">
+                    <div className="col-2">
                         <div id="copyright">
                             <ul className="menu">
                                 <li>&copy; Untitled. All rights reserved</li>
